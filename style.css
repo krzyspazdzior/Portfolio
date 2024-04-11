@@ -23,11 +23,11 @@ img {
     display: flex;
     width: 100%;
 }
-
 body {
     background-color: #18181B;
     display: flex;
     flex-direction: column;
+
 }
 
 .container {
@@ -35,7 +35,6 @@ body {
     align-items: center;
     margin: 1rem 0;
     padding-top: 4rem;
-    height: 100vh;
     color: #e8e8e8;
 }
 
@@ -110,6 +109,7 @@ a {
 .link a:hover::after {
     width: 100%;
 }
+
 
 header {
     position: relative;
@@ -205,7 +205,7 @@ footer a {
 }
 
 footer a:hover {
-    color: rgba(237, 240, 241, 0.902);
+    color: #edf0f1e6;
 }
 
 footer ul {
@@ -338,22 +338,31 @@ footer .icons {
 }
 form{
     display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+    max-width: 1200px;
+    background-color: #232326;
+    border-radius: 15px;
+    padding: 4rem 6rem;
+    box-shadow: 0 0 5px 2px black;
+    grid-template-columns: auto,auto,auto,auto,1fr,auto;
     grid-template-rows: auto;
-    grid-template-areas: "name sName"
-                         "email phone"
-                         "content content"
-                         "submit submit";
-    height: 500px;
-    gap: 1rem;
+    grid-template-areas: "name"
+                         "sName"
+                         "email"
+                         "phone"
+                         "content"
+                         "submit";
+    gap: 1.5rem;
 }
 form>*{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center; 
+}
+form>*>label{
+    width: 200px;
 }
 .name {
+    
     grid-area: name;
 }
 .sName {
@@ -378,39 +387,143 @@ form>*{
     justify-content: center;
     align-items: center;
 }
+ #submit#submit#submit{
+    flex-basis: 30%;
+    height: 60px;
+}
+label{
+    flex-basis: 30%;
+}
+input, textarea{
+    border-bottom: 2px solid #ffffff7e;
+    background-color: transparent;
+    color: #e8e8e8;
+    font-size: 13px;
+}
 input {
     height: 50px;
-    border: 3px solid transparent;
-    border-radius: 6px;
-    background-color: #e8e8e8;
+    flex-basis: 70%;
     transition: all 0.1s ease;
 }
 textarea{
-    border-radius: 6px;
+    flex-basis: 70%;
     padding: 1rem;
-    border: 5px solid transparent;
     resize: none;
-    background-color: #e8e8e8;
     transition: all 0.1s ease;
 }
 input:focus, textarea:focus{
     border-color: var(--secondary-blue);
-    background-color: #e8e8e8;;
-}
-input[type=file]{
-    background-color: transparent;
-    margin-top: 0.5rem;
-}
-input[type=submit]{
-    width: 400px;
+    border-bottom-color: var(--secondary-blue);
 }
 
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+::placeholder {
+    color: rgb(136, 127, 127);
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: rgb(136, 127, 127);
+  }
 
-
+  .hamburger{
+    display: none;
+    margin: 0 2em;
+  }
+  
+  .hamburger div{
+      display: none;
+      
+      
+  }
+  
+  .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #edf0f1;
+      margin: 6px 0;
+      transition: 0.2s;
+    }
+    .comp-section .bar1,.comp-section .bar2,.comp-section .bar3 {
+      background-color: #edf0f188;
+    }
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+  
+  .mobile-menu{
+    width: 100vw;
+    z-index: 10;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 10em;
+  }
+  .mobile-button{
+    color: var(--secondary-blue);
+    cursor: pointer;
+  }
+  .active-nav{
+    background-color: var(--main-grey);
+  }
 
 @media only screen and (max-width: 680px) {
     header .image img {
       display: none;
     }
+    form{
+        width: 90vw;
+        padding: 1rem 0;
+    }
+    .contact-area{
+        padding: 1rem;
+    }
+    nav ul, nav .btn{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger div{
+        display: block;
+        position: relative;
+    }
+    nav{
+      padding: 0;
+    }
+    .nav-logo{
+      flex-basis: 80%;
+    }
   }
+  .active.active.active{
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: var(--main-grey);
+  }
+
+
+@media only screen and (max-width: 900px) {
+    form>*{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

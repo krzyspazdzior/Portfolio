@@ -17,20 +17,6 @@ const mobileLinks = document.querySelectorAll('.mobile-link');
 const hamburger = document.querySelector('.hamburger');
 
 
-// function hamburgerToX(x) {
-//     x.classList.toggle("change");
-//     document.querySelector('.mobile-menu').classList.toggle('active');
-//     document.querySelector('nav').classList.toggle('active-nav');
-//     document.querySelector('nav').style.transition = 'all 0.1s ease';
-//   }
-  
-// mobileLink.forEach( link =>{
-//     link.addEventListener('click', function(){
-//         hamburger.classList.toggle("change");
-//         document.querySelector('.mobile-menu').classList.toggle('active');
-//     });
-// })
-
 function toggleMenu() {
     hamburger.classList.toggle("change");
     document.querySelector('.mobile-menu').classList.toggle('active');

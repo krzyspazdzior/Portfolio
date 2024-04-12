@@ -427,12 +427,22 @@ input[type=number] {
 }
 ::placeholder {
     color: rgb(136, 127, 127);
-    opacity: 1; /* Firefox */
+    opacity: 1;
   }
   
-  ::-ms-input-placeholder { /* Edge 12 -18 */
+  ::-ms-input-placeholder { 
     color: rgb(136, 127, 127);
   }
+
+.gallery-card{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 1.8rem;
+    justify-content: center;
+}
+
+
 
   .hamburger{
     display: none;

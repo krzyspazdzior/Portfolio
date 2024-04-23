@@ -33,7 +33,7 @@ body {
 .container {
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+
     padding-top: 4rem;
     color: #e8e8e8;
 }
@@ -88,11 +88,16 @@ ul {
     background-color: rgb(167, 233, 255);
     border: 2px solid var(--main-grey);
 }
-a {
+nav a {
     display: block;
     text-decoration: none;
     position: relative;
     color: #fff;
+
+}
+.features a{
+    text-decoration: none;
+    color: initial;
 }
 
 .link a::after {
@@ -245,12 +250,13 @@ footer .icons {
 
 
 .card {
+    
     background-color: #1f1f22;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     max-width: 300px;
     padding: 1.3rem 2rem;
-    border-radius: 18px;
+    border-radius: 15px;
     margin: 0 auto;
 }
 
@@ -321,8 +327,6 @@ footer .icons {
 }
 .course-card:hover{
     cursor: pointer;
-    border-color: #fff;
-    background-color: #353539;
 }
 .course-card:active{
     background-color: #5a5a5b;
@@ -340,6 +344,7 @@ form{
     display: grid;
     max-width: 1200px;
     background-color: #232326;
+    border: 1px solid transparent;
     border-radius: 15px;
     padding: 4rem 6rem;
     box-shadow: 0 0 5px 2px black;
@@ -352,6 +357,10 @@ form{
                          "content"
                          "submit";
     gap: 1.5rem;
+}
+form:hover{
+    border-color: #fff;
+    transition: all .15s ease;
 }
 form>*{
     display: flex;
@@ -416,7 +425,6 @@ input:focus, textarea:focus{
     border-bottom-color: var(--secondary-blue);
 }
 
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -433,16 +441,6 @@ input[type=number] {
   ::-ms-input-placeholder { 
     color: rgb(136, 127, 127);
   }
-
-.gallery-card{
-    display: flex;
-    flex-direction: column;
-    padding: 0 2rem;
-    gap: 1.8rem;
-    justify-content: center;
-}
-
-
 
   .hamburger{
     display: none;
@@ -521,6 +519,7 @@ input[type=number] {
     .nav-logo{
       flex-basis: 80%;
     }
+
   }
   .active.active.active{
     display: flex;

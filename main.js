@@ -41,12 +41,12 @@ galleryCards.forEach((card) => {
     // Mouseover event
     card.addEventListener('mouseover', function() {
         if (btn) btn.style.display = "block";
-        if (img) img.style.filter = "blur(4px)";
+        if (img) img.style.filter = "brightness(40%)";
     });
 
     // Mouseout event
     card.addEventListener('mouseout', function() {
         if (btn) btn.style.display = "none";
-        if (img) img.style.filter = "blur(0)";
+        if (img) img.style.filter = "brightness(100%)";
     });
 });

@@ -557,27 +557,3 @@ tr:nth-child(1){
 .table-desc{
     max-width: 700px;
 }
-#boring{
-    border-radius: 25px;
-    padding: 10px 20px;
-    background-color: rgb(84, 68, 40);
-    filter: opacity(0.9);
-}
-#neutral{
-    border-radius: 25px;
-    padding: 10px 20px;
-    background-color: rgb(106, 106, 106);
-    filter: opacity(0.9);
-}
-#amazing{
-    border-radius: 25px;
-    padding: 10px 20px;
-    background-color: rgb(1, 179, 22);
-    filter: opacity(0.9);
-}
-#good{
-    border-radius: 25px;
-    padding: 10px 20px;
-    background-color: rgb(110, 144, 73);
-    filter: opacity(0.9);
-}

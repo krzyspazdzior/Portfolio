@@ -342,7 +342,6 @@ footer .icons {
 }
 form{
     display: grid;
-    max-width: 1200px;
     background-color: #232326;
     border: 1px solid transparent;
     border-radius: 15px;
